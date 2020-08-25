@@ -8,6 +8,9 @@
         <div class="grid-container">
             <header class="header">
                 <div class="brand">
+                    <button onclick="openMenu()">
+                        &#9776;
+                    </button>
                     <a href="index.html">taiga</a>
                 </div>
                 <div class="header-links">
@@ -15,6 +18,18 @@
                     <a href="login.html">Sign In</a>
                 </div>
             </header>
+            <aside class="sidebar">
+                <h3>Product Categories</h3>
+                <button class="sidebar-close-button" onclick="closeMenu()"><</button>
+                <ul>
+                    <li>
+                        <a href="index.html">Shoes</a>
+                    </li>
+                    <li>
+                        <a href="index.html">Backpacks</a>
+                    </li>
+                </ul>
+            </aside>
             <main class="main">
                 <div class="content">
                     <ul class="products">
@@ -92,5 +107,13 @@
                 All rights reserved.
             </footer>
         </div>
+        <script>
+            function openMenu() {
+                document.querySelector(".sidebar").classList.add("open");
+            }
+            function closeMenu() {
+                document.querySelector(".sidebar").classList.remove("open");
+            }
+        </script>
     </body>
 </html>
