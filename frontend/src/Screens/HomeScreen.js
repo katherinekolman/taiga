@@ -1,12 +1,26 @@
-import React from 'react';
-import data from '../data';
+import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
+import axios from 'axios';
 
 function HomeScreen(props) {
-    return <ul className="products">
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const {data} = await axios.get("/api/products");
+      setProducts(data);
+    }
+    fetchData();
+    return () => {
+      //
+    };
+  }, []);
+
+  return <ul className="products">
     {
-      data.products.map(product => 
-        <li>
+      products.map(product => 
+        <li key={product._id}>
           <div className="product">
               <div className="product-name">
                   <Link to={'/product/' + product._id}>
@@ -19,7 +33,7 @@ function HomeScreen(props) {
           </div>
         </li>)
     }
-</ul>
+  </ul>
 }
 
 export default HomeScreen;
