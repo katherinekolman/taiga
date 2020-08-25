@@ -1,6 +1,7 @@
 export default {
     products:[
         {
+            _id: '0',
             name: 'Newton Ridge Waterproof Hiking Boot',
             category: 'Shoes',
             image: '/images/i1.jpg',
@@ -10,6 +11,7 @@ export default {
             numReviews: 95
         },
         {
+            _id: '1',
             name: 'Atmos AG 65',
             category: 'Backpacks',
             image: '/images/i1.jpg',
@@ -19,6 +21,7 @@ export default {
             numReviews: 203
         },
         {
+            _id: '2',
             name: "Men's Odyssey Sandal",
             category: 'Shoes',
             image: '/images/i1.jpg',

@@ -7,6 +7,9 @@ body {
   height: 100vh;
   margin: 0;
 }
+#root {
+  height: 100%;
+}
 .grid-container {
   display: grid;
   grid-template-areas: 
@@ -34,6 +37,7 @@ body {
 .header-links a {
   color: #ffffff;
   text-decoration: none;
+  padding: 1rem;
 }
 .header-links a:hover {
   color: #bababa
@@ -133,4 +137,57 @@ a {
   position: absolute;
   right: 0.5rem;
   top: 1.5rem;
+}
+
+/* Product Details */
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.details-image {
+  flex: 2 1 60rem;
+}
+.details-image img {
+  max-width: 60rem;
+  width: 100%;
+}
+.details-info {
+  flex: 1 1 30rem;
+}
+.details-action {
+  flex: 1 1 30rem;
+}
+.details-info ul, .details-action ul {
+  list-style-type: none;
+  padding: 0;
+}
+.details-info li, .details-action li {
+  margin-bottom: 1rem;
+}
+.back-to-results {
+  padding: 1rem;
+}
+.details-action {
+  border: .1rem #808080 solid;
+  border-radius: 0.5rem;
+  background-color: #f8f8f8;
+  padding: 1rem;
+}
+.details-action ul li:last-child {
+  display: flex;
+  flex-direction: column;
+}
+.details-action button {
+  padding: 1rem;
+  border: 0.1rem #808080 solid;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  background-color: #94db8c;
+}
+.details-action button:hover {
+  border: 0.1rem #101010 solid;
 }
