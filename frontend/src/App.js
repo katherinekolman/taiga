@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import data from './data'
 
 function App() {
   const openMenu = () => {
@@ -38,72 +39,20 @@ function App() {
             <main className="main">
                 <div className="content">
                     <ul className="products">
-                        <li>
-                            <div className="product">
-                                <img className="product-image" src="/images/i1.jpg" alt="product"/>
-                                <div className="product-name">
-                                    <a href="product.html">Hiking boots</a>
-                                </div>
-                                <div className="product-brand">Columbia</div>
-                                <div className="product-price">$59.99</div>
-                                <div className="product-rating">4.5 stars (10 reviews)</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="product">
-                                <img className="product-image" src="/images/i1.jpg" alt="product"/>
-                                <div className="product-name">
-                                    <a href="product.html">Hiking boots</a>
-                                </div>
-                                <div className="product-brand">Columbia</div>
-                                <div className="product-price">$59.99</div>
-                                <div className="product-rating">4.5 stars (10 reviews)</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="product">
-                                <img className="product-image" src="/images/i1.jpg" alt="product"/>
-                                <div className="product-name">
-                                    <a href="product.html">Hiking boots</a>
-                                </div>
-                                <div className="product-brand">Columbia</div>
-                                <div className="product-price">$59.99</div>
-                                <div className="product-rating">4.5 stars (10 reviews)</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="product">
-                                <img className="product-image" src="/images/i1.jpg" alt="product"/>
-                                <div className="product-name">
-                                    <a href="product.html">Hiking boots</a>
-                                </div>
-                                <div className="product-brand">Columbia</div>
-                                <div className="product-price">$59.99</div>
-                                <div className="product-rating">4.5 stars (10 reviews)</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="product">
-                                <img className="product-image" src="/images/i1.jpg" alt="product"/>
-                                <div className="product-name">
-                                    <a href="product.html">Hiking boots</a>
-                                </div>
-                                <div className="product-brand">Columbia</div>
-                                <div className="product-price">$59.99</div>
-                                <div className="product-rating">4.5 stars (10 reviews)</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="product">
-                                <img className="product-image" src="/images/i1.jpg" alt="product"/>
-                                <div className="product-name">
-                                    <a href="product.html">Hiking boots</a>
-                                </div>
-                                <div className="product-brand">Columbia</div>
-                                <div className="product-price">$59.99</div>
-                                <div className="product-rating">4.5 stars (10 reviews)</div>
-                            </div>
-                        </li>
+                        {
+                          data.products.map(product => 
+                            <li>
+                              <div className="product">
+                                  <img className="product-image" src={product.image} alt="product"/>
+                                  <div className="product-name">
+                                      <a href="product.html">{product.name}</a>
+                                  </div>
+                                  <div className="product-brand">{product.brand}</div>
+                                  <div className="product-price">{product.price}</div>
+                                  <div className="product-rating">{product.rating} stars ({product.numReviews} reviews)</div>
+                              </div>
+                            </li>)
+                        }
                     </ul>
                 </div>
             </main>
