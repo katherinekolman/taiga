@@ -1,8 +1,8 @@
 import React from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import './App.css';
-import HomeScreen from './Screens/HomeScreen';
-import ProductScreen from './Screens/ProductScreen';
+import HomeScreen from './screens/HomeScreen';
+import ProductScreen from './screens/ProductScreen';
 
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
               </aside>
               <main className="main">
                   <div className="content">
-                      <Route path="/product/:id"component={ProductScreen}/>
+                      <Route path="/product/:id" component={ProductScreen}/>
                       <Route path="/" exact={true} component={HomeScreen}/>
                   </div>
               </main>
