@@ -33,7 +33,6 @@ function CartScreen(props) {
                     <h3>Shopping Cart</h3>
                     <div>Price:</div>
                 </li>
-                <li>
                     {
                         cartItems.length === 0 ? <div>Cart is empty</div> :
                         cartItems.map(item => 
@@ -62,7 +61,6 @@ function CartScreen(props) {
                             </li>
                         )
                     }
-                </li>
             </ul>
         </div>
         <div className="cart-action">
