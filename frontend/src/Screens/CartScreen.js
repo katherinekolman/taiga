@@ -14,7 +14,7 @@ function CartScreen(props) {
     const dispatch = useDispatch();
     const removeFromCartHandler = (productId => {
         dispatch(removeFromCart(productId));
-    })
+    });
 
     useEffect(() => {
         if (productId) {
@@ -24,7 +24,7 @@ function CartScreen(props) {
 
     const checkoutHandler = () => {
         props.history.push("/signin?redirect=shipping");
-    }
+    };
 
     return <div className="cart">
         <div className="cart-list">

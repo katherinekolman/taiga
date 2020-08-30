@@ -283,6 +283,7 @@ input {
 }
 
 /* Products */
+
 .product-header {
   display: flex;
   justify-content: space-between;
@@ -299,4 +300,66 @@ th {
 }
 tbody>tr:nth-child(odd) {
   background-color: #f0f0f0;
+}
+
+/* Checkout Steps */
+
+.checkout-steps {
+  display: flex;
+  justify-content: space-between;
+  width: 40rem;
+  margin: 1rem auto;
+}
+.checkout-steps > div {
+  border-top: 0.3rem #c0c0c0 solid;
+  color: #c0c0c0;
+  flex: 1 1;
+  padding-top: 1rem;
+}
+.checkout-steps > div.active {
+  border-top: 0.3rem #f08000 solid;
+  color: #f08000;
+}
+
+/* Place Order */
+
+.placeOrder {
+  display: flex;
+  flex-grow: wrap;
+  padding: 1rem;
+  justify-content: space-between;
+}
+.placeOrder-info {
+  flex: 3 1 60rem;
+}
+.placeOrder-action {
+  flex: 1 1 20rem;
+  border: 0.1rem #c0c0c0 solid;
+  border-radius: 0.5rem;
+  background: #fcfcfc;
+  padding: 1rem;
+}
+.placeOrder-info > div {
+  border: 0.1rem #c0c0c0 solid;
+  border-radius: 0.5rem;
+  background: #fcfcfc;
+  padding: 1rem;
+  margin: 1rem;
+}
+.placeOrder-info > div:first-child {
+  margin-top: 0;
+}
+.placeOrder-action > ul {
+  padding: 0;
+  list-style-type: none;
+}
+.placeOrder-action > ul > li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.placeOrder-action > ul > li:last-child {
+  font-size: 2rem;
+  color: #c04000;
+  font-weight: bold;
 }
