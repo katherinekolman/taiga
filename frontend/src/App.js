@@ -19,7 +19,7 @@ function App() {
     const {userInfo} = userSignin;
 
   const openMenu = () => {
-    document.querySelector(".sidebar").classList.add("open");
+    //document.querySelector(".sidebar").classList.add("open");
   }
   const closeMenu = () => {
     document.querySelector(".sidebar").classList.remove("open");
@@ -40,7 +40,8 @@ function App() {
                       {userInfo ? <Link to="/profile">{userInfo.name}</Link> : <Link to="/signin">Sign in</Link>}
                   </div>
               </header>
-              <aside className="sidebar">
+              {/* FIXME: Future implementation */}
+              {/* <aside className="sidebar">
                   <h3>Product Categories</h3>
                   <button className="sidebar-close-button" onClick={closeMenu}>X</button>
                   <ul>
@@ -51,7 +52,7 @@ function App() {
                           <a href="index.html">Backpacks</a>
                       </li>
                   </ul>
-              </aside>
+              </aside> */}
               <main className="main">
                   <div className="content">
                       <Route path="/products" component={ProductsScreen}/>
@@ -66,7 +67,7 @@ function App() {
                   </div>
               </main>
               <footer className="footer">
-                  All rights reserved.
+                  <a href="https://github.com/katherinekolman/taiga"><img src='/images/github.png' alt='Github page' /></a>
               </footer>
           </div>
       </BrowserRouter>

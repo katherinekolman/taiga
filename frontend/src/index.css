@@ -29,7 +29,7 @@ button {
 }
 .header {
   grid-area: header;
-  background-color: #3f6948;
+  background-color: #000000;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -54,7 +54,7 @@ button {
 }
 .footer {
   grid-area: footer;
-  background-color: #3f6948;
+  background-color: #000000;
   color: #ffffff;
   display: flex;
   justify-content: center;
@@ -83,12 +83,13 @@ a {
 .product {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   height: 100%;
 }
 .product-image {
   max-width: 34rem;
   max-height: 34rem;
+  margin: auto;
 }
 .product-name {
   font-size: 2rem;
@@ -110,6 +111,28 @@ a {
 }
 .product-rating {
   margin-bottom: 1rem;
+}
+.image-container {
+  margin: 0;
+  padding-bottom: 5rem;
+  background-color: #f2ecda;
+}
+.image-container h2 {
+  font-size: 7rem;
+  color: #000000;
+  text-align: center;
+}
+.image-container img {
+  width: 100%;
+}
+.image-container p {
+  text-align: center;
+  width: 30%;
+  margin: auto;
+  background-color: #dec581;
+  padding: 3rem;
+  box-shadow: 1rem 1rem 1rem #a0a0a0;
+  border-radius: 1rem;
 }
 
 /* Side Bar */
