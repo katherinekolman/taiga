@@ -23,5 +23,10 @@
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.0",
     "nodemon": "^2.0.4"
+  },
+  "homepage": "https://github.com/katherinekolman/taiga#readme",
+  "engines": {
+    "node": "12.4.0",
+    "npm": "6.9.0"
   }
 }
