@@ -1,5 +1,7 @@
 # taiga
-This is a mock website for a store selling outdoors equipment which can be viewed [here ADDLINK]
+This is a mock website for a store selling outdoors equipment which can be viewed [here](https://taiga-ecommerce.herokuapp.com/). Alternatively, the repository can be downloaded, and can be ran locally with the following command:
+`npm start && cd frontend && npm install && npm start`
+
 
 This was built using React, Redux, MongoDB, Node.js, and Express. I followed [this](https://www.youtube.com/watch?v=Fy9SdZLBTOo) tutorial to build most of it.
 ## Features
